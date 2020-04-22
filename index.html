@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+	<title>My Favorite Dish</title>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="initial-scale=1.0">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162793015-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-162793015-1');
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+	
+	<body>
+	<button id="testbutton">Click me to test</button>
+		
+	<p>I love all the cuisines on the planet. Duh.</p>
+	<p>By the way, I just added some Google Analytics and it was awesome!</p>
+		
+	<footer>This is a new footer.</footer>
+		
+	<script>
+	$(document).ready(function(){
+	// add your jQuery code below
+     
+		$("#testbutton").on("click", function () {
+		// add the code you want to run below
+			console.log("Hello World!");
+			
+			gtag('event', 'click', {
+			  'event_category': 'buttons',
+			  'event_label': 'submit',
+			  'value': 'Someone clicked the test button on the front page.'
+			});
+			
+		});
+		
+		$("footer").on("mouseover", function () {
+		// add the code you want to run below
+			console.log("footer event working!")
+			
+			gtag('event', 'hover', {
+			  'event_category': 'footer',
+			  'event_label': 'hover',
+			  'value': 'Someone hovered on the footer on the front page.'
+			});
+			
+		});
+		
+		$("#testbutton").on("dblclick", function () {
+		// add the code you want to run below
+			console.log("double click event working!")
+			
+			gtag('event', 'hover', {
+			  'event_category': 'button',
+			  'event_label': 'double click',
+			  'value': 'Someone double clicked on the test button on the front page.'
+			});
+		});
+
+	// don't add more code past this line!
+	});
+	</script>
+		
+	</body>
+	
+</html>
